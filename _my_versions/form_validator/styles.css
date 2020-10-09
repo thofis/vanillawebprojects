@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #f9fafb;
+    background-color: #777;
     font-family: "DejaVu Sans", sans-serif;
     display: flex;
     align-items: center;
@@ -28,6 +28,14 @@ body {
 
 .form {
     padding: 30px 40px;
+}
+
+.form h3 {
+    text-align: center;
+    background-color: #3ae374;
+    color: white;
+    display: block;
+    padding: 10px 0px;
 }
 
 h2 {
