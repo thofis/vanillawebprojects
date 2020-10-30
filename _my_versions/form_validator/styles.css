@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
     --success-color: #2ecc71;
@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #f9fafb;
+    background-color: #3498db;
     font-family: "DejaVu Sans", sans-serif;
     display: flex;
     align-items: center;
