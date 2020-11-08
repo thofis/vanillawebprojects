@@ -13,8 +13,8 @@ body {
     display: grid;
     grid-template-columns: .5fr 1fr;
     grid-template-rows: 0.5fr 1fr .5fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-gap: 1rem;
+    margin: 0 1rem;
 }
 
 /*.div1 { grid-area: 1 / 1 / 2 / 6; }*/
@@ -23,7 +23,7 @@ body {
 /*.div4 { grid-area: 3 / 1 / 4 / 3; }*/
 
 header {
-    grid-area: 1 / 1 / 2 / 6;
+    grid-area: 1 / 1 / 2 / -1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,8 @@ header {
 header h1 {
     text-align: center;
     text-transform: uppercase;
-    text-decoration: underline;
-    font-size: 4rem;
+    font-size: 3rem;
+    transform: scaleX(1.5);
     letter-spacing: 1rem;
 }
 
@@ -54,7 +54,24 @@ header h1 {
 
 .term-container {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: #6feaf6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.term-container > .category {
+}
+
+.term-container > .term {
+    font-family: monospace;
+    padding-top: 2rem;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    transform: scaleX(1.25);
 }
 
 button.key {
@@ -64,9 +81,11 @@ button.key {
     border-radius: .5em;
     border: 1px solid black;
     box-shadow: .2em .25em .2em rgba(0, 0, 0, .5);
-    background-color: darkblue;
+    background-color: #666666;
     color: white;
     font-size: 2rem;
+    min-width: 7.5%;
+    min-height: 7.5%;
 }
 
 button.key:hover:not(.disabled) {
@@ -76,7 +95,7 @@ button.key:hover:not(.disabled) {
 }
 
 button.key.disabled {
-    opacity: .20;
+    opacity: .3;
     box-shadow: none;
 }
 
@@ -90,4 +109,42 @@ button.key.disabled {
 .figure-part {
     display: none;
 }
+
+.popup {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left:50%;
+    top: 12.5%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+
+    color: white;
+    border-radius: .5em;
+    border: 2px solid black;
+    box-shadow: .2em .25em .2em rgba(0, 0, 0, .5);;
+    text-align: center;
+    padding: 2rem 2rem;
+    font-size: 2rem;
+    z-index: 10;
+}
+
+.popup button {
+    margin-top: 1rem;
+    padding: .5rem;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+}
+
+.popup.won {
+    background-color: rgba(32, 128, 32, .95);
+}
+
+.popup.lost {
+    background-color: rgba(128, 32, 32, .95);
+}
+
 
